@@ -23,5 +23,18 @@
   "bugs": {
     "url": "https://github.com/rohan-varma/pokemongo-graphQL/issues"
   },
-  "homepage": "https://github.com/rohan-varma/pokemongo-graphQL#readme"
+  "homepage": "https://github.com/rohan-varma/pokemongo-graphQL#readme",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "bluebird": "^3.4.4",
+    "express": "^4.14.0",
+    "graphql": "^0.7.0",
+    "hapi": "^15.0.2",
+    "sqlite3": "^3.1.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.4.0",
+    "mocha": "^3.0.2"
+  }
 }
