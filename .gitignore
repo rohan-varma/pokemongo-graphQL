@@ -1,0 +1,4 @@
+# db stuff
+db.sqlite3
+#npm dependencies
+node_modules

@@ -1,0 +1,27 @@
+{
+  "name": "pokemongo-graphql",
+  "version": "1.0.0",
+  "description": "Example of a NodeJS backend that implements a graphQL schema for pokemon go",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohan-varma/pokemongo-graphQL.git"
+  },
+  "keywords": [
+    "pokemongo",
+    "graphQL",
+    "node",
+    "javascript",
+    "express",
+    "sqlite3"
+  ],
+  "author": "rohan-varma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rohan-varma/pokemongo-graphQL/issues"
+  },
+  "homepage": "https://github.com/rohan-varma/pokemongo-graphQL#readme"
+}
