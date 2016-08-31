@@ -8,8 +8,8 @@ import {
   GraphQLInterfaceType,
 } from 'graphql';
 
-import data from './pokemon.json';
-import moves from './moves.json';
+import data from './data/pokemon.json';
+import moves from './data/moves.json';
 
 const moveType = new GraphQLObjectType({
   name: 'move',
