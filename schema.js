@@ -1,1 +1,58 @@
-import { GraphQLList, GraphQLID, GraphQLNonNull, GraphQLString, GraphQLSchema, GraphQLObjectType} from 'graphql';
+import {
+  GraphQLSchema,
+  GraphQLObjectType,
+  GraphQLID,
+  GraphQLString,
+  GraphQLNonNull,
+  GraphQLList,
+  GraphQLInterfaceType,
+} from 'graphql';
+
+import data from './pokemon.json';
+import moves from './moves.json';
+
+const moveType = new GraphQLObjectType({
+  name: 'move',
+  fields: () => ({
+    id: {type: GraphQLString},
+    name: {type: GraphQLString},
+  }),
+});
+
+const pokemonType = new GraphQLObjectType({
+  name: 'pokemon',
+  fields: () => ({
+    id: {type: GraphQLString},
+    name: {type: GraphQLString},
+    favoriteMove: {
+      type: moveType,
+      resolve: (parent, fields) => moves[parent.id],
+    }
+  }),
+});
+
+const Query = new GraphQLObjectType({
+  name: 'Query',
+  fields: {
+    pokemon: {
+      type: pokemonType,
+      args: {
+        id: {type: GraphQLString}
+      },
+      resolve: (_, args) => data[args.id],
+    },
+    move: {
+      type: moveType,
+      args: {
+        id: {type: GraphQLString}
+      },
+      resolve: (_, args) => moves[args.id],
+    },
+  }
+});
+
+const Schema = new GraphQLSchema({
+  query: Query
+});
+
+export default Schema;
