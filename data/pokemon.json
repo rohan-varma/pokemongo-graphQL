@@ -1,18 +1,22 @@
 {
   "1": {
     "id": "1",
-    "name": "Pikachu"
+    "name": "Pikachu",
+    "thumbnail": "pikachu.jpg"
   },
   "2": {
     "id": "2",
-    "name": "Bulbasaur"
+    "name": "Bulbasaur",
+    "thumbnail": "bulbasaur.jpg"
   },
   "3": {
     "id": "3",
-    "name": "Squirtle"
+    "name": "Squirtle",
+    "thumbnail": "squirtle.jpg"
   },
   "4": {
     "id": "4",
-    "name": "Charmander"
+    "name": "Charmander",
+    "thumbnail": "charmander.jpg"
   }
 }

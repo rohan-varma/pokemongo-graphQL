@@ -25,6 +25,7 @@ const pokemonType = new GraphQLObjectType({
   fields: () => ({
     id: {type: GraphQLString},
     name: {type: GraphQLString},
+    thumbnail: {type: GraphQLString},
     favoriteMove: {
       type: moveType,
       resolve: (parent, _) => moves[parent.id],
