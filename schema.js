@@ -10,6 +10,7 @@ import {
 
 import data from './data/pokemon.json';
 import moves from './data/moves.json';
+import friends from './data/friends.json';
 
 const moveType = new GraphQLObjectType({
   name: 'move',
@@ -26,7 +27,11 @@ const pokemonType = new GraphQLObjectType({
     name: {type: GraphQLString},
     favoriteMove: {
       type: moveType,
-      resolve: (parent, fields) => moves[parent.id],
+      resolve: (parent, _) => moves[parent.id],
+    },
+    bestFriend: {
+      type: pokemonType,
+      resolve: (parent, _) => friends[parent.id],
     }
   }),
 });
@@ -39,14 +44,14 @@ const Query = new GraphQLObjectType({
       args: {
         id: {type: GraphQLString}
       },
-      resolve: (_, args) => data[args.id],
+      resolve: (_,args) => data[args.id],
     },
     move: {
       type: moveType,
       args: {
         id: {type: GraphQLString}
       },
-      resolve: (_, args) => moves[args.id],
+      resolve: (_,args) => moves[args.id],
     },
   }
 });
